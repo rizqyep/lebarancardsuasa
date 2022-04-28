@@ -58,13 +58,9 @@ downloadBtn.addEventListener('click', () => {
     var node = document.getElementById("lebaranCardResult")
 
 
-    htmlToImage.toPng(node)
-        .then(function(dataUrl) {
-            download(dataUrl, `Kartu Lebaran - ${senderName}.png`);
-            tempResult.innerHTML = ""
-            loadingText.hidden = true;
-
-
+    domtoimage.toBlob(node)
+        .then(function(blob) {
+            saveAs(blob, `KartuLebaran - ${senderName}.png`);
         });
 })
 
