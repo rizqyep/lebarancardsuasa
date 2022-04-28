@@ -312,7 +312,7 @@ body {
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 28px;
     width: 100%;
     text-shadow: 2px 3px 5px rgba(100, 100, 100, 0.5);
 }
@@ -323,7 +323,7 @@ body {
     top: 91%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
+    font-size: 18px;
     text-shadow: 2px 3px 5px rgba(100, 100, 100, 0.5);
 }
 
