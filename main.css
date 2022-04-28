@@ -331,14 +331,14 @@ body {
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 56px;
+    font-size: 64px;
     width: 100%;
     text-shadow: 2px 3px 5px rgba(100, 100, 100, 0.5);
 }
 
 #additionalTextTargetResult {
     position: absolute;
-    font-size: 28px;
+    font-size: 36px;
     top: 91%;
     left: 50%;
     transform: translate(-50%, -50%);
