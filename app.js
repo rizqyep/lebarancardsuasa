@@ -61,6 +61,8 @@ downloadBtn.addEventListener('click', () => {
     domtoimage.toBlob(node)
         .then(function(blob) {
             saveAs(blob, `KartuLebaran - ${senderName}.png`);
+            tempResult.innerHTML = html;
+            loadingText.hidden = true;
         });
 })
 
