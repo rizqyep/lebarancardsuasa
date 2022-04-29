@@ -25,6 +25,8 @@ resultModalBtn.addEventListener('click', () => {
         alert("Silahkan pilih gambar terlebih dahulu!");
         return
     } else {
+        loadingText.innderHtml = "Sedang Mengunduh Gambar ...";
+        loadingText.hidden = true;
         senderName = senderNameInput.value;
         additionalText = additionalTextInput.value;
 
@@ -62,7 +64,7 @@ downloadBtn.addEventListener('click', () => {
         .then(function(blob) {
             saveAs(blob, `KartuLebaran - ${senderName}.png`);
             tempResult.innerHTML = html;
-            loadingText.hidden = true;
+            loadingText.innerText = "Gambar Telah tersimpan"
         });
 })
 
