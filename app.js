@@ -50,7 +50,7 @@ downloadBtn.addEventListener('click', async() => {
     loadingText.hidden = false;
     var html = `
                 <div id="lebaranCardResult">
-                    <img src=${choosenSrc} alt="LebaranCard Image" id="lebaranCardImageResult">
+                    <img src="${choosenSrc}" alt="LebaranCard Image" id="lebaranCardImageResult">
                     <p className="text-center" id="senderNameTargetResult">${senderName}</p>
                     <p className="text-center" id="additionalTextTargetResult">${additionalText}</p>
                 </div>`;
@@ -69,6 +69,8 @@ downloadBtn.addEventListener('click', async() => {
                     loadingText.innerText = "Gambar Telah tersimpan"
                 });
         } else {
+
+
             let blobresult = await domtoimage.toBlob(node);
             window.location = URL.createObjectURL(blobresult);
 
