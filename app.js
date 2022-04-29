@@ -44,7 +44,7 @@ function htmlToElement(html) {
 
 let downloadBtn = document.getElementById("downloadBtn");
 
-downloadBtn.addEventListener('click', () => {
+downloadBtn.addEventListener('click', async() => {
 
 
     loadingText.hidden = false;
@@ -69,11 +69,9 @@ downloadBtn.addEventListener('click', () => {
                     loadingText.innerText = "Gambar Telah tersimpan"
                 });
         } else {
-            domtoimage.toBlob(node)
-                .then(function(blob) {
+            let blobresult = await domtoimage.toBlob(node);
+            window.location = URL.createObjectURL(blobresult);
 
-                    window.location = URL.createObjectURL(blob);
-                });
         }
     }
 
