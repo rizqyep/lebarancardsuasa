@@ -66,11 +66,7 @@ downloadBtn.addEventListener('click', async() => {
 
     var ua = navigator.userAgent.toLowerCase();
     if (ua.indexOf('safari') != -1) {
-        if (ua.indexOf('chrome') > -1 ||
-            ua.indexOf('firefox') > -1 ||
-            ua.indexOf('opera') > -1 ||
-            ua.indexOf('opr') > -1
-        ) {
+        if (ua.indexOf('chrome') > -1) {
             domtoimage.toBlob(node)
                 .then(function(blob) {
                     saveAs(blob, `KartuLebaran - ${senderName}.png`);
