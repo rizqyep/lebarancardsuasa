@@ -10,6 +10,12 @@ let lebaranCardResult = document.getElementById("lebaranCardResult");
 let resultModalBtn = document.getElementById("resultModalBtn");
 let choosenSrc = "";
 
+
+
+let lebaranCard = document.getElementById("lebaranCard");
+
+let lebaranCardImage = document.getElementById("lebaranCardImage");
+
 let loadingText = document.getElementById("loadingText")
 
 
@@ -25,7 +31,6 @@ resultModalBtn.addEventListener('click', () => {
         alert("Silahkan pilih gambar terlebih dahulu!");
         return
     } else {
-        loadingText.innderHtml = "Sedang Mengunduh Gambar ...";
         loadingText.hidden = true;
         senderName = senderNameInput.value;
         additionalText = additionalTextInput.value;
@@ -108,12 +113,6 @@ function updateSelectedId(id) {
         }
     })
 }
-
-
-
-let lebaranCard = document.getElementById("lebaranCard");
-
-let lebaranCardImage = document.getElementById("lebaranCardImage");
 
 lebaranCardOptions.forEach((option) => {
     option.addEventListener('click', (e) => {
