@@ -71,8 +71,8 @@ downloadBtn.addEventListener('click', () => {
         } else {
             domtoimage.toBlob(node)
                 .then(function(blob) {
-                    var newWindow = window.open();
-                    newWindow.location = URL.createObjectURL(blob);
+
+                    window.location = URL.createObjectURL(blob);
                 });
         }
     }
