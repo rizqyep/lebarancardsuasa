@@ -59,13 +59,24 @@ downloadBtn.addEventListener('click', () => {
 
     var node = document.getElementById("lebaranCardResult")
 
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('safari') != -1) {
+        if (ua.indexOf('chrome') > -1) {
+            domtoimage.toBlob(node)
+                .then(function(blob) {
+                    saveAs(blob, `KartuLebaran - ${senderName}.png`);
+                    tempResult.innerHTML = "";
+                    loadingText.innerText = "Gambar Telah tersimpan"
+                });
+        } else {
+            domtoimage.toBlob(node)
+                .then(function(blob) {
+                    var newWindow = window.open();
+                    newWindow.location = URL.createObjectURL(blob);
+                });
+        }
+    }
 
-    domtoimage.toBlob(node)
-        .then(function(blob) {
-            saveAs(blob, `KartuLebaran - ${senderName}.png`);
-            tempResult.innerHTML = "";
-            loadingText.innerText = "Gambar Telah tersimpan"
-        });
 })
 
 
