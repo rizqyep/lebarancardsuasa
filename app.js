@@ -71,8 +71,25 @@ downloadBtn.addEventListener('click', async() => {
         } else {
 
 
-            let blobresult = await domtoimage.toBlob(node);
+            lebaranCard.style.height = "1024px";
+            lebaranCard.style.width = "1024px";
+            lebaranCardImage.style.height = "1024px";
+            lebaranCardImage.style.width = "1024px";
+            senderNameTarget.style.fontSize = "38px";
+            additionalTextTarget.style.fontSize = "24px";
+
+
+            let blobresult = await domtoimage.toBlob(lebaranCard);
             window.location = URL.createObjectURL(blobresult);
+
+            lebaranCard.style.height = "400px";
+            lebaranCard.style.width = "400px";
+            lebaranCardImage.style.height = "400px";
+            lebaranCardImage.style.width = "400px";
+            senderNameTarget.style.fontSize = "19px";
+            additionalTextTarget.style.fontSize = "12px";
+            tempResult.innerHTML = "";
+            loadingText.innerText = "Gambar Telah tersimpan"
 
         }
     }
