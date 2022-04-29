@@ -63,7 +63,7 @@ downloadBtn.addEventListener('click', () => {
     domtoimage.toBlob(node)
         .then(function(blob) {
             saveAs(blob, `KartuLebaran - ${senderName}.png`);
-            tempResult.innerHTML = html;
+            tempResult.innerHTML = "";
             loadingText.innerText = "Gambar Telah tersimpan"
         });
 })
